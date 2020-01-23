@@ -1,24 +1,9 @@
-# README
+# Test Driven Blog App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a basic test driven blog application using RSpec.
 
-Things you may want to cover:
+## Steps to use
 
-* Ruby version
+I have removed the `database.yml` file so a new file will need to be created
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`bundle && bin/rails db:create && bin/rails db:migrate && bin/rails s`
