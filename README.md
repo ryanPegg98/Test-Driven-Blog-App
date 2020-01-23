@@ -13,6 +13,13 @@ I have removed the `database.yml` file so a new file will need to be created
 The following software has been used to build this application:
 
 * Ruby on Rails 6
-* RSpec
 * MySQL
 * SCSS
+
+### Gems Used
+
+The following gems have been used to create the project
+
+* RSpec
+* Capybara
+* Devise
