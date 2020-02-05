@@ -1,0 +1,11 @@
+<%= link_to "New Article", new_article_path, class: "btn" %>
+
+<% if @articles.any? %>
+  <ul>
+    <% @articles.each do |article| %>
+      <li><%= article.title %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No Articles have been created</p>
+<% end %>

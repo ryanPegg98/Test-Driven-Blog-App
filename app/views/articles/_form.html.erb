@@ -1,0 +1,18 @@
+<% if f.object.errors.any? %>
+  <h2>Please solve the following errors before saving:</h2>
+  <ul>
+    <% f.object.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<div class="field">
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+</div>
+
+<div class="field">
+  <%= f.label :body %>
+  <%= f.text_area :body %>
+</div>
