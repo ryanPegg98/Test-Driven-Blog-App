@@ -1,0 +1,57 @@
+@import "../vars";
+
+@mixin btn_style($bg_colour, $text_colour) {
+  background-color: $bg_colour;
+  color: $text_colour;
+  border-color: $bg_colour;
+
+  &:hover {
+    background-color: lighten($bg_colour, 10%);
+    border-color: lighten($bg_colour, 10%);
+  }
+}
+
+.btn {
+  width: 95%;
+  border: 2px solid $white;
+  padding: 10px;
+  display: inline-block;
+  color: $white;
+  text-decoration: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 10px 2.5%;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+
+  @include desktop_device {
+    width: auto;
+    padding: 10px 15px;
+    margin: 10px;
+  }
+
+  &:hover {
+    background-color: $white;
+    color: $background_colour;
+  }
+
+  &.btn {
+    &-success {
+      @include btn_style($green, $white);
+    }
+    &-danger {
+      @include btn_style($red, $white);
+    }
+    &-warning {
+      @include btn_style($yellow, $black);
+    }
+    &-info {
+      @include btn_style($blue, $white);
+    }
+    &-back {
+      @include btn_style(lighten($background_colour, 10%), $white);
+    }
+  }
+}

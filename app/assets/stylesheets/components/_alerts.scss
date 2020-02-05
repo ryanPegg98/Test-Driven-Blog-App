@@ -1,0 +1,40 @@
+@import "../vars";
+
+.alerts {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 100%;
+  max-width: 300px;
+
+  > .alert {
+    margin-top: 20px;
+  }
+}
+
+@mixin alert_colours($background, $text){
+  color: $text;
+  background-color: $background;
+}
+
+.alert {
+  width: 100%;
+  padding: 20px;
+  background-color: $brand-colour;
+  color: $black;
+  text-align: left;
+  box-sizing: border-box;
+
+  &-success {
+    @include alert_colours($green, $white);
+  }
+  &-danger {
+    @include alert_colours($red, $white);
+  }
+  &-warning {
+    @include alert_colours($yellow, $black);
+  }
+  &-info {
+    @include alert_colours($blue, $black);
+  }
+}

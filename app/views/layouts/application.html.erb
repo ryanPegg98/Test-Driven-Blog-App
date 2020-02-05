@@ -10,8 +10,26 @@
   </head>
 
   <body>
-    <p><%= notice %></p>
-    <p><%= alert %></p>
-    <%= yield %>
+    <header>
+      <%= link_to root_path, class: "logo" do %>
+        BlogApp
+      <% end %>
+    </header>
+    <nav class="main_nav">
+      <%= link_to "Articles", root_path %>
+    </nav>
+    <footer>
+      &copy; Ryan Pegg 2020
+    </footer>
+    <main>
+      <%= yield %>
+    </main>
+    <section class="alerts">
+      <% flash.each do |key, message| %>
+        <div class="alert alert-<%= key %>">
+          <%= message %>
+        </div>
+      <% end %>
+    </section>
   </body>
 </html>

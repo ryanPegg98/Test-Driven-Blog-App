@@ -1,0 +1,15 @@
+/** COLOURS **/
+$background_colour: #242424 !default;
+$brand-colour: #009AD5 !default;
+
+$white: #FFFFFF !default;
+$black: $background_colour !default;
+$green: #00C033 !default;
+$red: #FF2455 !default;
+$yellow: #FFB200 !default;
+$blue: #00C4EA !default;
+
+/** FONTS **/
+$default_font: Arial, sans-serif !default;
+
+@import "utils";

@@ -1,0 +1,27 @@
+@import "../vars";
+
+.field {
+  width: 95%;
+  margin: 10px 2.5%;
+
+  @include desktop_device {
+    max-width: 400px;
+    margin: 10px;
+  }
+
+  LABEL {
+    display: block;
+  }
+
+  INPUT, TEXTAREA, SELECT {
+    width: 100%;
+    background-color: $white;
+    color: $background_colour;
+    box-sizing: border-box;
+    padding: 10px;
+    font-family: $default_font;
+    border: 1px solid $white;
+    outline: none;
+    margin-top: 5px;
+  }
+}
